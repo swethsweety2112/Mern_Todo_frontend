@@ -1,0 +1,44 @@
+.images{
+   text-align: center; 
+}
+.table-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .custom-table {
+    border: 2px solid #ccc; /* Add border outline */
+    border-collapse: collapse; /* Collapse borders */
+    width: 80%; /* Set width of table */
+  }
+  
+  th, td {
+    border: 1px solid #ddd; /* Add border to cells */
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Gray background for header */
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Gray background for even rows */
+  }
+  
+  tr:hover {
+    background-color: #ddd; /* Highlight row on hover */
+  }
+  .centered-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Optional: Makes the container take up the full height of the viewport */
+  }
+  
+  .small-logo {
+    width: 140px; /* Adjust this value as needed */
+    height: auto; /* Automatically adjust the height based on the width */
+  }
+    
