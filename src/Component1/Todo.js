@@ -13,7 +13,7 @@ const Todo = () => {
     const [obj, setObj] = useState({});
 
     function create() {
-        axios.post('http://localhost:5000/posting', { todo, age, gender })
+        axios.post('https://mern-todo-backend-plrj.onrender.com/posting', { todo, age, gender })
             .then((response) => {
                 console.log('Response after posting:', response.data);
                 setTodos([...todos, response.data]); // Add the new todo to the existing list
@@ -29,7 +29,7 @@ const Todo = () => {
     }
     
     function getData() {
-        axios.get('http://localhost:5000/posting')
+        axios.get('https://mern-todo-backend-plrj.onrender.com/posting')
             .then((response) => {
                 console.log('Response data:', response.data);
                 setTodos(response.data);
@@ -40,7 +40,7 @@ const Todo = () => {
     }
 
     function getExactData(id) {
-        axios.get('http://localhost:5000/posting/${id}')
+        axios.get('https://mern-todo-backend-plrj.onrender.com/posting/${id}')
             .then((resp) => {
                 setObj(resp.data);
                 alert('Data retrieved successfully');
@@ -51,7 +51,7 @@ const Todo = () => {
     }
 
     function updateTodo(id, updatedTodo) {
-        axios.put(`http://localhost:5000/posting/${id}`, updatedTodo)
+        axios.put(`https://mern-todo-backend-plrj.onrender.com/posting/${id}`, updatedTodo)
             .then(() => {
                 getData();
             })
@@ -61,7 +61,7 @@ const Todo = () => {
     }
     
     function deleteTodo(id) {
-        axios.delete(`http://localhost:5000/posting/${id}`)
+        axios.delete(`https://mern-todo-backend-plrj.onrender.com/posting/${id}`)
             .then(() => {
                 getData();
             })
